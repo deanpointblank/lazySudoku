@@ -7,6 +7,17 @@ export default class Store {
         self.mutations = {};
         self.state = {};
         self.status = 'resting';
+
+        self.events = new PubSub();
+
+        if(params.hasOwnProperty('actions')) {
+            self.actions = params.actions;
+        }
+
+        if(params.hasOwnProperty('mutations')){
+            self.mutations = params.mutations;
+        }
+        
     }
 
 }
