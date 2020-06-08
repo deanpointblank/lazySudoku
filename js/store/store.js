@@ -38,4 +38,24 @@ export default class Store {
         
     }
 
+    dispatch(actionKey, payload){
+
+        let self = this;
+
+        if(typeof self.actions[actionKey] !== 'function'){
+            console.error(`Action "${actionKey}" doesn't exist.`);
+            return false;
+        }
+
+        console.groupCollapsed(`ACTION: ${actionKey}`);
+
+        self.status = 'action';
+
+        self.actions[actionKey](self, payload);
+
+        console.groupEnd();
+
+        return true;
+    }
+
 }
