@@ -34,12 +34,27 @@ export default class GameBoard extends Component{
     
     render(){
         return(
-            <section className="mainBoard">
-                <GameRow row={this.state.board[0]}/>
-                <GameRow row={this.state.board[1]}/>
-                <GameRow row={this.state.board[2]}/>
+            <table className="mainBoard">
+                <colgroup><col/><col/><col/></colgroup>
+                <colgroup><col/><col/><col/></colgroup>
+                <colgroup><col/><col/><col/></colgroup>
+                <tbody>
+                    <GameRow row={this.state.board[0]}/>
+                </tbody>
+                <tbody>
+                    <GameRow row={this.state.board[1]}/>
+                </tbody>
+                <tbody>
+                    <GameRow row={this.state.board[2]}/>
+                </tbody>
 
-            </section>
+            </table>
         )
     }
 }
+{/* 
+// Task diaplay baord in grid fashion
+//-->How though? Css Grid?
+//-->
+//-->
+// add ability to type inputs into board */}
