@@ -25,7 +25,7 @@ export default class GameBoard extends Component{
         }
     }
 
-    changeBoard = (position, value) => {
+    updateBoard = (position, value) => {
         this.setState({
            board: this.state.board[position] = value
         })
@@ -39,13 +39,13 @@ export default class GameBoard extends Component{
                 <colgroup><col/><col/><col/></colgroup>
                 <colgroup><col/><col/><col/></colgroup>
                 <tbody>
-                    <GameRow row={this.state.board[0]}/>
+                    <GameRow row={this.state.board[0]} updateBoard={this.updateBoard}/>
                 </tbody>
                 <tbody>
-                    <GameRow row={this.state.board[1]}/>
+                    <GameRow row={this.state.board[1]} updateBoard={this.updateBoard}/>
                 </tbody>
                 <tbody>
-                    <GameRow row={this.state.board[2]}/>
+                    <GameRow row={this.state.board[2]} updateBoard={this.updateBoard}/>
                 </tbody>
 
             </table>
