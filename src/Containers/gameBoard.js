@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GameRow from '../Components/GameRow';
+import { GameRow } from '../Components/GameRow';
 
 export default class GameBoard extends Component{
     constructor(){
@@ -28,9 +28,9 @@ export default class GameBoard extends Component{
     render(){
         return(
             <section className="mainBoard">
-                <GameBoard row={this.state.board[0][0]}/>
-                <GameBoard row={this.state.board[0][1]}/>
-                <GameBoard row={this.state.board[0][2]}/>
+                <GameRow row={this.state.board[0]}/>
+                <GameRow row={this.state.board[0]}/>
+                <GameRow row={this.state.board[0]}/>
 
             </section>
         )
