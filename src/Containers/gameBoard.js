@@ -32,10 +32,11 @@ export default class GameBoard extends Component{
         currentBoard[rowID][rowValue][valuePosition] = value
         console.log(rowID, rowValue, valuePosition)
         console.log(currentBoard)
-
-        this.setState({
-           board: currentBoard
-        })
+        if (value == '' || value < 10 && value > 0){
+            this.setState({
+            board: currentBoard
+            })
+        }
 
     }
     
@@ -60,8 +61,7 @@ export default class GameBoard extends Component{
     }
 }
 {/* 
-// Task diaplay baord in grid fashion
-//-->How though? Css Grid?
-//-->
-//-->
-// add ability to type inputs into board */}
+-Task diaplay baord in grid fashion
+-Validations for each grid
+--numbers only between 0 & 10
+ */}
