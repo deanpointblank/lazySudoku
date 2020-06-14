@@ -42,15 +42,18 @@ export default class GameBoard extends Component{
 
     checkBoardSolution = () => {
         const currentBoard = this.state.board
-        //checks box by box
+        let boardRows = []
+        //checks line by line horizontally
         currentBoard.forEach((section)=>{
             section.forEach((row) => {
+                boardRows.push(row)
                 let currentRow = [...new Set(row)]
-               console.log(currentRow.length === 9)
+                console.log(currentRow.length === 9)
             })
         })
         //checks line by line vertically
-        //checks line by line horizontally
+
+        //checks box by box
     }
     
     render(){
