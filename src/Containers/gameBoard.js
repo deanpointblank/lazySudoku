@@ -39,6 +39,10 @@ export default class GameBoard extends Component{
         }
 
     }
+
+    checkBoardSolution = () => {
+        console.log('I work!')
+    }
     
     render(){
         return(
@@ -64,7 +68,11 @@ export default class GameBoard extends Component{
     }
 }
 {/* 
--Task diaplay baord in grid fashion
--Validations for each grid
---numbers only between 0 & 10
+-Solve Sudoku Board
+--Check If Board Is Correct
+--Highlight Wrong Numbers
+---Signal Correct/Incorrect based on search
+
+-Generate a new game of Sudoku
+
  */}
