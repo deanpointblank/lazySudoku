@@ -41,7 +41,8 @@ export default class GameBoard extends Component{
     }
 
     checkBoardSolution = () => {
-        console.log('I work!')
+        const currentBoard = {...this.state.board}
+        
     }
     
     render(){
