@@ -41,8 +41,11 @@ export default class GameBoard extends Component{
     }
 
     checkBoardSolution = () => {
-        const currentBoard = {...this.state.board}
-        
+        const currentBoard = this.state.board
+        currentBoard[0].forEach((row)=>{
+            console.log(row)
+        })
+        console.log(currentBoard)
     }
     
     render(){
