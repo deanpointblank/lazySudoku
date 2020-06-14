@@ -29,9 +29,10 @@ export default class GameBoard extends Component{
         const rowValue = position[0]
         const valuePosition = position[1]
         const currentBoard = {...this.state.board}
-        console.log(rowID, rowValue, valuePosition)
         currentBoard[rowID][rowValue][valuePosition] = value
+        console.log(rowID, rowValue, valuePosition)
         console.log(currentBoard)
+
         this.setState({
            board: currentBoard
         })
