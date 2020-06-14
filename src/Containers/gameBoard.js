@@ -58,6 +58,7 @@ export default class GameBoard extends Component{
                     </tbody>
 
                 </table>
+                <button>Submit</button><button>Solve</button>
             </>
         )
     }
