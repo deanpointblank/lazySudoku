@@ -42,21 +42,23 @@ export default class GameBoard extends Component{
     
     render(){
         return(
-            <table className="mainBoard">
-                <colgroup><col/><col/><col/></colgroup>
-                <colgroup><col/><col/><col/></colgroup>
-                <colgroup><col/><col/><col/></colgroup>
-                <tbody>
-                    <GameRow rowID={0} rowValues={this.state.board[0]} updateBoard={this.updateBoard}/>
-                </tbody>
-                <tbody>
-                    <GameRow rowID={1} rowValues={this.state.board[1]} updateBoard={this.updateBoard}/>
-                </tbody>
-                <tbody>
-                    <GameRow rowID={2} rowValues={this.state.board[2]} updateBoard={this.updateBoard}/>
-                </tbody>
+            <>
+                <table className="mainBoard">
+                    <colgroup><col/><col/><col/></colgroup>
+                    <colgroup><col/><col/><col/></colgroup>
+                    <colgroup><col/><col/><col/></colgroup>
+                    <tbody>
+                        <GameRow rowID={0} rowValues={this.state.board[0]} updateBoard={this.updateBoard}/>
+                    </tbody>
+                    <tbody>
+                        <GameRow rowID={1} rowValues={this.state.board[1]} updateBoard={this.updateBoard}/>
+                    </tbody>
+                    <tbody>
+                        <GameRow rowID={2} rowValues={this.state.board[2]} updateBoard={this.updateBoard}/>
+                    </tbody>
 
-            </table>
+                </table>
+            </>
         )
     }
 }
