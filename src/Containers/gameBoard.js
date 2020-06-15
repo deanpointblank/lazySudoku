@@ -110,6 +110,10 @@ export default class GameBoard extends Component{
                     ]
         })
     }
+
+    solveBoard = () =>{
+        
+    }
     
     render(){
         return(
@@ -129,7 +133,7 @@ export default class GameBoard extends Component{
                     </tbody>
 
                 </table>
-                <button onClick={event => {this.checkBoardSolution()}}>Submit</button><button>Solve</button><button>New Game</button><button onClick={event => {this.testBoard()}}>Test Board</button>
+                <button onClick={event => {this.checkBoardSolution()}}>Submit</button><button onClick={event => {this.solveBoard()}}>Solve</button><button>New Game</button><button onClick={event => {this.testBoard()}}>Test Board</button>
             </>
         )
     }
