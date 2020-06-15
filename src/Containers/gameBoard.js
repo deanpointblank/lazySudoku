@@ -65,6 +65,8 @@ export default class GameBoard extends Component{
                 }
             }
         }
+
+        
         //checks box by box
     }
     
