@@ -32,7 +32,7 @@ export default class GameBoard extends Component{
         currentBoard[rowID][rowValue][valuePosition] = value
         console.log(rowID, rowValue, valuePosition)
         console.log(currentBoard)
-        if (value == '' || value < 10 && value > 0){
+        if (value === '' || value < 10 && value > 0){
             this.setState({
             board: currentBoard
             })
@@ -53,18 +53,18 @@ export default class GameBoard extends Component{
             console.log(currentRow.length === 9)
         })
         // checks line by line vertically
-        // let boardCols = []
-        // for(let i = 0; i < boardRows.length; i++){
-        //     for(let j = 0; j < boardRows[i].length; j++){
-        //         boardCols.push(boardRows[i][j])
-        //         if(boardCols.length === 9){
-        //             let currentCol = [...new Set(boardCols)]
-        //             console.log(currentCol.length === 9)
-        //             boardCols = []
-        //         }
-        //     }
-        // }
+        let col = []
 
+        for (let i = 0; i < currentBoard.length; i++){
+            for(let j = 0; j < currentBoard[i].length; j++){
+                col.push(currentBoard[i][j])
+                if(j === 8){
+                    col = [...new Set(col)]
+                    console.log(col.length === 9)
+                    col = []
+                }
+            }
+        }
         //checks box by box
     }
     
