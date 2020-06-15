@@ -74,8 +74,8 @@ export default class GameBoard extends Component{
         let box3 = []
         for(let i = 0; i < currentBoard.length; i++){
             box1.push(currentBoard[i].slice(0,3))
-            box2.push(currentBoard[i].slice(2,3))
-            box3.push(currentBoard[i].slice(5,3))
+            box2.push(currentBoard[i].slice(3,6))
+            box3.push(currentBoard[i].slice(6,9))
             if(box1.length === 3){
                box1 = [...new Set(box1.flat())]
                box2 = [...new Set(box2.flat())]
@@ -91,6 +91,9 @@ export default class GameBoard extends Component{
                box3 = []
             }
         }
+    }
+    testBoard = () =>{
+        
     }
     
     render(){
@@ -111,7 +114,7 @@ export default class GameBoard extends Component{
                     </tbody>
 
                 </table>
-                <button onClick={event => {this.checkBoardSolution()}}>Submit</button><button>Solve</button><button>New Game</button>
+                <button onClick={event => {this.checkBoardSolution()}}>Submit</button><button>Solve</button><button>New Game</button><button onClick={event => {this.testBoard()}}>Test Board</button>
             </>
         )
     }
