@@ -80,11 +80,8 @@ export default class GameBoard extends Component{
                box1 = [...new Set(box1.flat())]
                box2 = [...new Set(box2.flat())]
                box3 = [...new Set(box3.flat())]
-               console.log(box1)
                console.log(box1.length === 9)
-               console.log(box2)
                console.log(box2.length === 9)
-               console.log(box3)
                console.log(box3.length === 9)
                box1 = []
                box2 = []
