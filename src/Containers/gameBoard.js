@@ -28,7 +28,7 @@ export default class GameBoard extends Component{
     updateBoard = (rowID, position, value) => {
         const rowValue = position[0]
         const valuePosition = position[1]
-        const currentBoard = {...this.state.board}
+        const currentBoard = [...this.state.board]
         currentBoard[rowID][rowValue][valuePosition] = value
         console.log(rowID, rowValue, valuePosition)
         console.log(currentBoard)
@@ -41,17 +41,35 @@ export default class GameBoard extends Component{
     }
 
     checkBoardSolution = () => {
-        const currentBoard = this.state.board
-        let boardRows = []
-        //checks line by line horizontally
-        currentBoard.forEach((section)=>{
+        let currentBoard = []
+        this.state.board.forEach((section) => {
             section.forEach((row) => {
-                boardRows.push(row)
-                let currentRow = [...new Set(row)]
-                console.log(currentRow.length === 9)
+                currentBoard.push(row)
             })
         })
-        //checks line by line vertically
+        // let boardRows = []
+        //checks line by line horizontally
+        console.log(currentBoard)
+        // currentBoard.forEach((section, index)=>{
+        //     section.forEach((row) => {
+        //         boardRows.push(row)
+        //         let currentRow = [...new Set(row)]
+        //         console.log(currentRow.length === 9)
+        //         console.log(index)
+        //     })
+        // })
+        // checks line by line vertically
+        // let boardCols = []
+        // for(let i = 0; i < boardRows.length; i++){
+        //     for(let j = 0; j < boardRows[i].length; j++){
+        //         boardCols.push(boardRows[i][j])
+        //         if(boardCols.length === 9){
+        //             let currentCol = [...new Set(boardCols)]
+        //             console.log(currentCol.length === 9)
+        //             boardCols = []
+        //         }
+        //     }
+        // }
 
         //checks box by box
     }
