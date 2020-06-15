@@ -47,17 +47,11 @@ export default class GameBoard extends Component{
                 currentBoard.push(row)
             })
         })
-        // let boardRows = []
         //checks line by line horizontally
-        console.log(currentBoard)
-        // currentBoard.forEach((section, index)=>{
-        //     section.forEach((row) => {
-        //         boardRows.push(row)
-        //         let currentRow = [...new Set(row)]
-        //         console.log(currentRow.length === 9)
-        //         console.log(index)
-        //     })
-        // })
+        currentBoard.forEach((row)=>{
+            let currentRow = [...new Set(row)]
+            console.log(currentRow.length === 9)
+        })
         // checks line by line vertically
         // let boardCols = []
         // for(let i = 0; i < boardRows.length; i++){
