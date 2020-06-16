@@ -112,7 +112,12 @@ export default class GameBoard extends Component{
     }
 
     solveBoard = () =>{
-        
+        // step1: turn board into 2d Array
+        let currentBoard = [...this.state.board].flat()
+        console.log(currentBoard)
+        // step2: for every cell, check to see if a number between 1 and 9 is compatible with the restrictions
+        // step3: if no number is compatible, backtrack:
+        /// -> step3a: 
     }
     
     render(){
