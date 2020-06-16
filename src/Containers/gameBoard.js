@@ -111,11 +111,35 @@ export default class GameBoard extends Component{
         })
     }
 
+    solveRow = () =>{
+
+    }
+
+    solveCol = () =>{
+
+    }
+
+    SolveBox = () =>{
+
+    }
+
+
     solveBoard = () =>{
         // step1: turn board into 2d Array
         let currentBoard = [...this.state.board].flat()
-        console.log(currentBoard)
-        // step2: for every cell, check to see if a number between 1 and 9 is compatible with the restrictions
+        // step2: for every cell, check to see if there is already a value
+        for (let i = 0; i < currentBoard.length; i++){
+            for (let j = 0; j < currentBoard[i].length; j++){
+                console.log(currentBoard[i][j] !== "")
+            }
+        }
+        // step3: check if a number between 1 and 9 is compatible with the restrictions
+
+        // step3a: return true if this row constains number
+        // step3b: return true if this row constains number
+        // step3c: return true if this box constains number
+        // step3d: 
+
         // step3: if no number is compatible, backtrack:
         /// -> step3a: 
     }
